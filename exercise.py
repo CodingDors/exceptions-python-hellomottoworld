@@ -1,6 +1,7 @@
 def add(num1, num2):
     """
     Add two numbers together.
+    num1 + num2 
 
     Args:
     - num1 (str): First number as a string.
@@ -22,11 +23,19 @@ def add(num1, num2):
 def subtract(num1, num2):
     # Similar to the add function.
     # TODO: Implement this function.
-    pass
+    try:
+        return float(num1) - float(num2)
+    except ValueError:
+        raise ValueError("Invalid input. Please provide valid numbers.")
+        pass
 
 def multiply(num1, num2):
     # Similar to the add function.
     # TODO: Implement this function.
+    try:
+        return float(num1) * float(num2)
+    except ValueError:
+        raise ValueError("Invalid input. Please provide valid numbers.")
     pass
 
 def divide(num1, num2):
@@ -46,6 +55,12 @@ def divide(num1, num2):
 
     """
     # TODO: Implement this function.
+    try:
+        return float(num1)/ float(num2)
+    except ValueError:
+        raise ValueError("Invalid input. Please provide valid numbers.")
+    except ZeroDivisionError:
+        raise ZeroDivisionError("Cannot divide by zero.")
     pass
 
 def driver():
